@@ -1,178 +1,235 @@
-# Bewerbungs-Manager
-Das Plugin Bewerbungs-Manager bietet eine zentrale Verwaltung und Übersicht für alle Accounts im Bewerbungsprozess.<br>
+# Application Manager
+The Application Manager plugin provides centralized management and an overview of all accounts in the application process.
+
+
+Main features include:
+
+- Overview of all application accounts
+
+- Individual checklist for the application process
+
+- Automatic acceptance tool (WoB) that accepts applications and moves accounts to the appropriate group
+
+
+All three features can be individually enabled or disabled in the plugin settings.
+
+## Overview of all accounts in the application process
+The plugin creates a dedicated overview page displaying all accounts in the application process. These are divided into two groups:
+
+- <b>Application Pending</b> - Accounts that have not yet created an application topic in the designated area appear here.
+
+- <b>Under Correction</b> - Accounts whose application topic has already been created in the designated area appear here.
+
+
+The overview displays important information:
+
+- How many days remain on the deadline
+- How many extensions have already been made
+- Which team member is making the correction
+
+In the settings, you can:
+
+- completely disable the option to extend the deadline
+- set the maximum number of extensions
+- configure whether users can extend the deadline themselves
+- whether users can see the number of extensions made by other accounts
+
+Additionally, a <b>correction period</b> can be activated. This starts automatically as soon as a team member creates a correction post in the application thread (via a special input option when submitting a post). Here, too, you can optionally specify whether users can extend the deadline themselves.
+
+As soon as a team member takes over an application, this is also displayed in the overview. If desired, you can specify in the settings how many days team members have to address each application. If this deadline is missed, a notification banner will automatically appear for the relevant team member to ensure no application is overlooked.
+
+In addition, automatic banner notifications can be set up to inform users well in advance of the application or revision deadline.
+
+In the ACP (RPG Extensions » Accounts in the Application Process), you can also edit the data of individual accounts – deadline dates, number of extensions, or the assigned team member. This simplifies management for individual requests and eliminates the need to access the database.
+
+### Note!
+
+This overview and management feature is not compatible with the <a href="https://github.com/katjalennartz/application_ucp" target="_blank">Profiles in the UCP of risuena</a>.
+
+## Checklist
+The plugin offers a flexible checklist function that allows you to make certain information mandatory for accounts in the application process. Each person in the application process sees a personal to-do list in the forum header, indicating which tasks set by the team still need to be completed. This allows applicants to keep track of what they still need to do. The checklist colors are entirely controlled via CSS and can be customized to match your forum's design. The checkmarks and crosses are simple symbols treated like text characters. These symbols can be modified and replaced in the language file if needed. The checklist is fully configured via the ACP (RPG Extensions » Application Checklist). It is organized into groups, each containing its own items.<br>
 <br>
-<b>Zu den Hauptfunktionen gehören:</b>
-- Übersicht aller Bewerbungs-Accounts
-- individuelle Checkliste für den Bewerbungsprozess,
-- automatisches Annahme-Tool (WoB), das Bewerbungen annimmt und Accounts in die entsprechenden Gruppe verschiebt<br>
-<br>
-Alle drei Funktionen können in den Plugin-Einstellungen individuell aktiviert oder deaktiviert werden.
+<b>Example:</b>
 
-## Übersicht aller Accounts im Bewerbungsprozess
-Das Plugin erstellt eine eigene Übersichtsseite, auf der alle Accounts im Bewerbungsprozess angezeigt werden. Diese werden in zwei Gruppen unterteilt:<br>
-- <b>Bewerbung ausstehend</b> - Hier erscheinen Accounts, die noch kein Bewerbungsthema im vorgesehenen Bereich erstellt haben.
-- <b>Unter Korrektur</b> - Hier erscheinen Accounts, deren Bewerbung (Thema) bereits im vorgesehenen Bereich erstellt wurden.
+- Group: Graphics - Items: Avatar, Mini Icon, Profile Banner
 
-In der Übersicht werden wichtige Informationen angezeigt:<br>
-- wie viele Tage die Fristen noch laufen
-- wie oft bereits verlängert wurde
-- welches Teammitglied korrigiert<br>
-<br>
-In den Einstellungen kannst du:
-- die Möglichkeit zur Verlängerung komplett deaktivieren
-- die maximale Anzahl an Verlängerungen festlegen
-- einstellen, ob User:innen die Frist eigenständig verlängern dürfen
-- ob User:innen die Anzahl der Verlängerungen von anderen Accounts sehen können<br>
-<br>
-Zusätzlich kann eine <b>Korrekturfrist</b> aktiviert werden. Diese startet automatisch, sobald ein Teammitglied im Bewerbungsthema einen Korrekturpost (über eine spezielle Eingabeoption beim Absenden eines Beitrags) erstellt. Auch hier kann optional festgelegt werden, ob User:innen die Frist selbst verlängern dürfen.<br>
-Sobald ein Teammitglied eine Bewerbung übernimmt, wird dies ebenfalls in der Übersicht angezeigt. Auf Wunsch kann in den Einstellungen festlegen, wie viele Tage Teammitglieder Zeit haben, sich um die jeweilige Bewerbung zu kümmern. Wenn diese Frist überschritten wird, wird automatisch einen Hinweisbanner für das entsprechende Teammitglied angezeigt, damit keine Bewerbung liegen bleibt.<br>
-Außerdem können automatische Banner-Benachrichtigungen eingerichtet werden, die User:innen rechtzeitig vor Ablauf der Bewerbungs- oder Korrekturfrist informieren.<br>
-<br>
-Im ACP (RPG Erweiterungen » Accounts im Bewerbungsprozess) gibt es zusätzlich die Möglichkeit, die Daten einzelner Accounts zu bearbeiten – Enddaten der Fristen, Anzahl der Verlängerungen oder das zugewiesene Teammitglied. Das erleichtert die Verwaltung bei individuellen Anfragen und spart den Umweg über die Datenbank.<br>
+- Group: Personal - Items: Nickname, Posting Frequency, Discord Tag<br>
 
-### Hinweis!
-Diese Übersicht und Verwaltung ist nicht kompatibel mit dem <a href="https://github.com/katjalennartz/application_ucp" target="_blank">Steckbriefe im UCP von risuena</a>.
-
-## Checkliste
-Das Plugin bietet eine flexible Checklisten-Funktion, mit der bestimmte Angaben für Accounts im Bewerbungsprozess verpflichtend abgefragt werden können. Jede Person in der Bewerbungsphase sieht im Header des Forums eine persönliche To-Do-Liste, die anzeigt, welche vom Team festgelegten Punkte noch zu erledigen sind. So behalten Bewerbende jederzeit den Überblick, was ihnen noch fehlt.<br>
-Die Farben der Checkliste werden vollständig über CSS gesteuert und können bei Bedarf an das eigene Forendesign angepasst werden. Bei den Haken und Kreuzen handelt es sich um einfache Zeichen, die wie Schriftzeichen behandelt werden. Diese Symbole können bei Bedarf in der Sprachdatei angepasst und ausgetauscht werden.<br>
-Die Checkliste wird vollständig über das ACP (RPG Erweiterungen » Checkliste für Bewerbungen) konfiguriert. Sie ist in Gruppen organisiert, die jeweils eigene Punkte enthalten.<br>
-<br>
-<b>Beispiel:</b>
-- Gruppe: Grafiken - Punkte: Avatar, Mini-Icon, Profilbanner
-- Gruppe: Persönliches - Punkte: Spitzname, Postingtempo, Discord-Tag<br>
 <br>
 
-<b>Gruppen haben:</b><br>
-- einen Titel
-- optional eine Beschreibung (HTML ist erlaubt)
-- eine frei festlegbare Sortierreihenfolge<br>
+<b>Groups have:</b><br>
+- a title
+- optional description (HTML is allowed)
+- a freely definable sort order<br>
+
 <br>
 
-<b>Punkte haben:</b><br>
-- einen eigenen Titel
-- eine Sortierung innerhalb der Gruppe
-- eine Datenerfassungs-Option
+<b>Items have:</b><br>
+
+- their own title
+- a sort order within the group
+- a data collection option
+
 <br>
 
-<b>Datenerfassungs-Optionen für Punkte</b><br>
-Für jeden Checklistenpunkt kannst du festlegen, <b>wie geprüft wird</b>, ob er erfüllt ist:<br>
-- Profilfeld (MyBB)
-- Steckbrieffeld (<a href="https://github.com/katjalennartz/application_ucp" target="_blank">Steckbriefe im UCP - risuena</a>)
-- Geburtstagsfeld (MyBB)
-- Uploadelement (<a href="https://github.com/little-evil-genius/Upload-System" target="_blank">Uploadsystem - little.evil.genius</a>)
-- Eigene PHP-Abfrage - für individuellere Prüfungen (z.B. Joblisten)
+<b>Data Collection Options for Items</b><br>
+For each checklist item, you can define <b>how it is checked</b> whether it is fulfilled:<br>
+- Profile field (MyBB)
 
-### Eigene PHP-Abfragen (für Sonderfälle)
-Nicht alle Informationen lassen sich mit den Standardoptionen prüfen. Für solche Fälle kannst du eigene Datenbankabfragen definieren. Beispiel: <a href="https://github.com/katjalennartz/jobliste/tree/main" target="_blank">Jobliste von risuena</a><br>
-- Datenbanktabelle: Name der Tabelle, in der die Einträge gespeichert sind (jl_entry)
-- UID-Spalte: Name der Spalte, in der die User-IDs gespeichert sind (je_uid)
-- Überprüfungs-Spalte: Name der Spalte, in der geprüft wird, ob ein Eintrag vorhanden ist (je_position)
-- Mehrfache Angabe (optional): Gibt an, wie oft ein Eintrag vorkommen muss (z.B. 2 für zwei Jobs). Wenn leer, reicht ein Eintrag aus.
+- Brief field (<a href="https://github.com/katjalennartz/application_ucp" Profiles in the UCP - risuena)
 
-### Abhängigkeiten zwischen Gruppen-Punkte und Profilangaben
-In vielen Foren gibt es Bewerber:innen mit unterschiedlichen Gruppierunge (z.B. Werwölfe, Hexen, Vampire), die spezifische Informationen angeben müssen.<br>
-Das Plugin ermöglicht es, Punkte innherhalb einer Gruppen abhängig von bestimmten Profilangaben anzuzeigen.<br>
+- Birthday field (MyBB)
 
-<b>Beispiel:</b>
-- Werwölfe - Pflichtfelder: Prägung, Art, Rangordnung
-- Hexen - Pflichtfelder: Magieart, Tier
-- Vampire - Pflichtfelder: Verwandlungstag, Fähigkeit<br>
+- Upload element (<a href="https://github.com/little-evil-genius/Upload-System" target="_blank">Upload system - little.evil.genius</a>)
 
-<b>So funktioniert es:</b>
-- Aktiviere bei der Gruppe die Option "Spezifische Checklisten-Punkte".
-- Wähle ein Profilfeld oder Steckbrieffeld als Auswahlquelle aus.
-- Gib bei den einzelnen Punkten für diese Gruppe die Bedingung an, bei welchem Feldwert sie erscheinen sollen (z.B. "Hexe").<br>
+- Custom PHP query - for more customized checks (e.g., job lists)
 
-Am besten eignet sich ein Auswahlfeld mit festen Werten, um Tippfehler und uneinheitliche Angaben zu vermeiden.<br>
-Dadurch sieht die Person im Bewerbungsprozess nur die Punkte, die für ihre Auswahl relevant sind.
+### Custom PHP queries (for special cases)
+Not all information can be checked with the standard options. For such cases, you can define your own database queries. Example: <a href="https://github.com/katjalennartz/jobliste/tree/main" target="_blank">Job list from risuena</a><br>
 
-### Hinweis!
-Die Checkliste lässt sich <b>problemlos</b> mit dem <a href="https://github.com/katjalennartz/application_ucp" target="_blank">Steckbriefe im UCP von risuena</a> kombinieren.
+- Database tagbelle: Name of the table where the entries are stored (jl_entry)
 
-## Automatisches WoB-Tool
-Das automatische WoB-Tool ("Welcome on Board") ermöglicht es, Bewerber:innen mit nur einem Klick anzunehmen.<br>
-Das WoB-Tool wird am Ende des Bewerbungsthemas (Showthread) angezeigt. Wenn für eine Bewerbung bereits ein bestimmtes Teammitglied fest zugewiesen wurde, ist das Tool nur für dieses Teammitglied sichtbar. Ist kein Teammitglied festgelegt, können alle Teammitglieder mit den entsprechenden Rechten das Tool sehen und verwenden.<br>
-<br>
-<b>Folgende Funktionen stehen zur Verfügung:</b>
-- <b>Benutzergruppen ändern:</b> Beim WoB-Vorgang wird die primäre Benutzergruppe des Accounts automatisch von der Bewerbungsgruppe auf die eingestellte Zielgruppe für angenommene Accounts gewechselt. Zusätzlich können bei Bedarf auch sekundäre Gruppen automatisch angepasst werden.
-- </b>Automatische Antwort posten:</b> Optional kann beim WoB automatisch eine Antwort im Bewerbungsthema gepostet werden.<br>
+- UID column: Name of the column where the user IDs are stored (je_uid)
 
-Hier gibt es zwei Varianten:<br>
-1. Ein fester, in den Einstellungen definierter Text wird direkt gepostet.<br>
-2. Ein vorgefertigter Text, den das Teammitglied vor dem Posten noch bearbeiten kann - so bleibt Flexibilität, um z.B. individuelle Grüße oder Hinweise hinzuzufügen.<br>
+- Validation column: Name of the column used to check if an entry exists (je_position)
 
-<b>WoB-Datum speichern:</b><br>
-Es besteht die Möglichkeit, eine Spalte in der users-Tabelle anzugeben, in der das Datum des WoB-Eintrags gespeichert wird. So kann jederzeit nachvollzogen werden, wann der Account angenommen wurde.
+- Multiple entry (optional): Specifies how many times an entry must occur (e.g., 2 for two jobs). If left blank, one entry is sufficient.
 
-### Hinweis!
-Das WoB-Tool ist nicht kompatibel mit dem <a href="https://github.com/katjalennartz/application_ucp" target="_blank">Steckbriefe im UCP von risuena</a>.
 
-# Vorrausetzung
-- Das ACP Modul <a href="https://github.com/little-evil-genius/rpgstuff_modul" target="_blank">RPG Stuff</a> <b>muss</b> vorhanden sein.
-- Der <a href="https://doylecc.altervista.org/bb/downloads.php?dlid=26&cat=2" target="_blank">Accountswitcher</a> von doylecc <b>muss</b> installiert sein.
 
-# Übertragung von Bewerber:innen aus anderen Systemen
-Falls euer Forum zuvor einen anderes Plugin für das verwalten von Bewerber:innen genutzt hat, bietet dieses Plugin eine einfache Möglichkeit, bestehende Daten in das neue System zu übertragen. Aktuell werden Übertragungen aus folgenden Plugins unterstützt:
-- <a href="https://github.com/aheartforspinach/Bewerberuebersicht">Bewerberübersicht von aheartforspinach</a>
-- <a href="https://github.com/Ales12/applicationoverview">Bewerberübersicht von Ales</a>
-<br>
-Um die Übertragung durchzuführen, gehe wie folgt vor:<br>
-<br>
-1. <b>Navigieren zum Übertragungsseite:</b><br>Im ACP findest du im Modul "RPG Erweiterungen" den Menüpunkt "Bewerber:innen übertragen". Klicke auf diesen Punkt, um die Übertragungsseite zu öffnen.<br><br>
-2. <b>Auswahl vom alten Plugin:</b><br>Auf der Übertragungsseite kannst du das System auswählen, von dem du die Daten übertragen möchtest. Wähle das entsprechenden Plugin und fahre fort.<br><br>
-3. <b>Übertragungsprozess abschließen:</b><br>Nachdem du das Plugin ausgewählt hast, beginnt der Übertragungsprozess. Alle relevanten Daten werden automatisch in die neue Datenbanktabelle übernommen. Sobald die Übertragung abgeschlossen ist, erhältst du eine Bestätigung. Bei Problemen immer im SG-Supportthema melden!<br><br>
-4. <b>Altes System deinstallieren:</b><br>Nachdem die Übertragung erfolgreich durchgeführt wurde, kannst du das alte System gefahrlos deinstallieren, da alle Daten jetzt in das neue Plugin übertragen wurden.<br>
 
-# Datenbank-Änderungen
-hinzugefügte Tabelle:
+``` ### Dependencies between Group Points and Profile Information
+
+Many forums have applicants with different groups (e.g., werewolves, witches, vampires) who must provide specific information.
+
+This plugin allows you to display points within a group based on specific profile information.
+
+Example:
+
+- Werewolves - Required fields: Imprint, Species, Rank
+- Witches - Required fields: Magic Type, Animal
+
+- Vampires - Required fields: Transformation Day, Ability
+
+How it works:
+
+- Activate the "Specific Checklist Points" option for the group.
+
+- Select a profile field or character sheet field as the selection source.
+
+- For each item in this group, specify the condition for which field value it should appear (e.g., "Witch").
+
+A selection field with fixed values ​​is best to avoid typos and inconsistent entries. This ensures that the applicant only sees the items relevant to their selection during the application process.
+
+### Note!
+
+The checklist can be easily combined with the <a href="https://github.com/katjalennartz/application_ucp" target="_blank">profiles in risuena's UCP</a>.
+
+## Automatic WoB Tool
+The automatic WoB tool ("Welcome on Board") allows you to accept applicants with just one click.
+
+The WoB tool is displayed at the end of the application thread. If a specific team member has already been assigned to an application, the tool is only visible to that team member. If no team member is specified, all team members with the appropriate permissions can view and use the tool.
+
+The following functions are available:
+
+- Change user groups: During the WoB process, the primary user group of the account is automatically changed from the application group to the defined target group for accepted accounts. Secondary groups can also be automatically adjusted if needed.
+
+- Post automatic reply: Optionally, a reply can be automatically posted to the application thread during the WoB (Word of Mouth) process.
+
+There are two options:
+
+1. A fixed text, defined in the settings, is posted directly.
+
+2. A pre-written text that the team member can edit before posting – this allows flexibility to add, for example, individual greetings or notes.
+
+Save WoB date:
+
+You can specify a column in the users table to save the date of the WoB entry. This allows you to track when the account was accepted at any time.
+
+### Note!
+
+The WoB tool is not compatible with the <a href="https://github.com/katjalennartz/application_ucp" target="_blank">profiles in the risuena UCP</a>.
+
+
+# Prerequisite
+
+- The ACP module <a href="https://github.com/little-evil-genius/rpgstuff_modul" target="_blank">RPG Stuff</a> must be installed.
+
+- The <a href="https://doylecc.altervista.org/bb/downloads.php?dlid=26&cat=2" target="_blank">Accountswitcher</a> from doylecc must be installed.
+
+# Transferring Applicants from Other Systems
+If your forum previously used a different plugin for managing applicants, this plugin offers a simple way to transfer existing data to the new system. Currently, transfers from the following plugins are supported:
+
+- <a href="https://github.com/aheartforspinach/Bewerberuebersicht">Applicant Overview from aheartforspinach</a>
+- <a href="https://github.com/Ales12/applicationoverview">Applicant Overview from Ales</a>
+
+To perform the transfer, proceed as follows:
+
+
+1. Navigate to the transfer page: In the ACP, you will find the menu item "Transfer Applicants" in the "RPG Extensions" module. Click on this item to open the transfer page.
+
+2. Select the old plugin: On the transfer page, you can select the system from which you want to transfer the data. Select the appropriate plugin and continue.<br><br>
+3. <b>Complete the transfer process:</b><br>After you have selected the plugin, the transfer process will begin. All relevant data will be automatically transferred to the new database table. You will receive a confirmation once the transfer is complete. Always report any problems in the SG support thread!<br><br>
+4. <b>Uninstall the old system:</b><br>After the transfer has been successfully completed, you can safely uninstall the old system, as all data has now been transferred to the new one.New plugins have been transferred.
+
+# Database Changes
+Added table:
+
 - application_checklist_fields
 - application_checklist_groups
 - application_manager
 
-# Neue Sprachdateien
+# New language files
 - deutsch_du/admin/application_manager.lang.php
-- deutsch_du/application_manager.lang.php<br>
+- deutsch_du/application_manager.lang.php
+
 <br>
-<b>HINWEIS:</b><br>
-Kann genauso für deutsch_sie verwendet werden, sollte das ACP und Forum nicht auf deutsch_du laufen.
+<b>NOTE:</b><br>
+This can also be used for deutsch_sie if the ACP and forum are not running in deutsch_du.
 
-# Einstellungen
-- Bewerbungsgruppe
-- Teamgruppe
-- ausgeschlossene Accounts
-- Forum für Bewerbungen
-- Spitzname
-- Checkliste für Bewerbungen
-- Bewerbungsfristen
-- Bewerbungszeitraum
-- Verlängerungszeitraum der Bewerbung
-- Maximale Anzahl der Verlängerungen der Bewerbungsfrist
-- Selbstständige Verlängerung
-- Einsehbare Verlängerungen der Bewerbungsfrist
-- Benachrichtigung über ablaufende Bewerbungsfrist
-- Korrekturfrist
-- Korrekturzeitraum
-- Verlängerungszeitraum der Korrekturfrist
-- Maximale Anzahl der Verlängerungen der Korrekturfrist
-- Selbstständige Verlängerung
-- Einsehbare Verlängerungen der Korrekturfrist
-- Benachrichtigung über ablaufende Korrekturfrist
-- Teamerinnerung für offene Bewerbungen
-- automatisches WoB
-- primäre Gruppen
-- sekundäre Gruppen
-- automatischer Annahme-Text
-- Annahme-Text
-- WoB Datum speichern<br>
+
+
+# Database Changes
+
+Added table:
+
+- application_manager.lang.php ... # Settings
+- Application group
+- Team group
+- Excluded accounts
+- Application forum
+- Nickname
+- Application checklist
+- Application deadlines
+- Application period
+- Application extension period
+- Maximum number of application deadline extensions
+- Self-extension
+- Visible application deadline extensions
+- Notification of expiring application deadline
+- Correction deadline
+- Correction period
+- Correction deadline extension period
+- Maximum number of correction deadline extensions
+- Self-extension
+- Visible correction deadline extensions
+- Notification of expiring correction deadline
+- Team reminder for open applications
+- Automatic WoB
+- Primary groups
+- Secondary groups
+- Automatic acceptance text
+- Acceptance text
+- Save WoB date<br>
 <br>
-<b>HINWEIS:</b><br>
-Das Plugin ist kompatibel mit den klassischen Profilfeldern von MyBB und/oder dem <a href="https://github.com/katjalennartz/application_ucp">Steckbrief-Plugin von Risuena</a>.
+<b>NOTE:</b><br>
 
-# Neue Template-Gruppe innerhalb der Design-Templates
-- Bewerbungs-Manager
+The plugin is compatible with the classic MyBB profile fields and/or the <a href="https://github.com/katjalennartz/application_ucp">Risuena profile plugin</a>.
 
-# Neue Templates (nicht global!)
+# New template group within the design templates
+- Application manager
+
+# New templates (not global!)
 - applicationmanager_banner
 - applicationmanager_checklist
 - applicationmanager_checklist_banner
@@ -193,247 +250,273 @@ Das Plugin ist kompatibel mit den klassischen Profilfeldern von MyBB und/oder de
 - applicationmanager_wob_additionalgroup
 - applicationmanager_wob_text
 - applicationmanager_wob_usergroup<br><br>
-<b>HINWEIS:</b><br>
-Alle Templates wurden größtenteils ohne Tabellen-Struktur gecodet. Das Layout wurde auf ein MyBB Default Design angepasst.
+<b>NOTE:</b><br>
 
-# Neue Variablen
+All templates were largely coded without a table structure. The layout has been adapted to a MyBB default design.
+
+# New Variables
+
 - forumdisplay_thread: {$applicationPlus} & {$application_corrector}
+
 - header: {$application_checklist} & {$application_openAlert} & {$application_team_reminder} & {$application_deadline_reminder} & {$application_expired}
+
 - newreply: {$application_correction}
+
 - showthread: {$application_wob} & {$application_corrector} & {$application_correction}
+
 - editpost: {$application_hidden}
 
-# Neues CSS - application_manager.css
-Es wird automatisch in jedes bestehende und neue Design hinzugefügt. Man sollte es einfach einmal abspeichern - auch im Default. Nach einem MyBB Upgrade fehlt der Stylesheets im Masterstyle? Im ACP Modul "RPG Erweiterungen" befindet sich der Menüpunkt "Stylesheets überprüfen" und kann von hinterlegten Plugins den Stylesheet wieder hinzufügen.
-```css
+# New CSS - application_manager.css
+
+It will be automatically added to every existing and new design. It's a good idea to save it – even in the default design. Is the stylesheet missing from the master style after a MyBB upgrade? In the ACP module "RPG Extensions," you'll find the menu item "Check Stylesheets" and can add the stylesheet from any installed plugins.
+
+``css
+
 .application_manager_checklist {
-	background: #fff;
-	width: 100%;
-	margin: auto auto;
-	border: 1px solid #ccc;
-	padding: 1px;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
+
+background: #fff;
+
+width: 100%;
+
+margin: auto auto;
+
+border: 1px solid #ccc;
+
+padding: 1px;
+
+-moz-border-radius: 7px;
+
+-webkit-border-radius: 7px;
+
+border-radius: 7px;
+
 }
 
 .application_manager_checklist-headline {
-	background: #0066a2 url(../../../images/thead.png) top left repeat-x;
-	color: #ffffff;
-	border-bottom: 1px solid #263c30;
-	padding: 8px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-topright: 6px;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+
+background: #0066a2 url(../../../images/thead.png) top left repeat-x;
+
+color: #ffffff;
+
+border-bottom: 1px solid #263c30;
+
+padding: 8px; 
+-moz-border-radius-topleft: 6px; 
+-moz-border-radius-topright: 6px; 
+-webkit-border-top-left-radius: 6px; 
+-webkit-border-top-right-radius: 6px; 
+border-top-left-radius: 6px; 
+border-top-right-radius: 6px;
 }
 
-.application_manager_checklist-headline span {
-	font-size: 10px;
+.application_manager_checklist-headline span { 
+font-size: 10px;
 }
 
 .application_manager_checklist-headline a:link,
 .application_manager_checklist-headline a:visited,
 .application_manager_checklist-headline a:active,
-.application_manager_checklist-headline a:hover {
-	color: #ffffff;
+.application_manager_checklist-headline a:hover { 
+color: #ffffff;
 }
 
-.application_manager_checklist-group {
-	background: #f5f5f5;
-	border: 1px solid;
-	border-color: #fff #ddd #ddd #fff;
-	padding: 5px 10px;
-	display: flex;
-	align-items: center;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	gap: 5px;
+.application_manager_checklist-group { 
+background: #f5f5f5; 
+border: 1px solid; 
+border-color: #fff #ddd #ddd #fff; 
+padding: 5px 10px; 
+display: flex; 
+align-items: center; 
+flex-wrap: nowrap; 
+justify-content: flex-start; 
+gap: 5px;
 }
 
-.application_manager_checklist-group_status {
-	width: 2%;
-	text-align: center;
-	font-size: 20px;
+.application_manager_checklist-group_status { 
+width: 2%; 
+text-align: center; 
+font-size: 20px;
 }
 
-.application_manager_checklist-group_content-points {
-	font-size: 11px;
+.application_manager_checklist-group_content-points { 
+font-size: 11px;
 }
 
-.application_manager_checklist_groupUncheck, 
-.application_manager_checklist_fieldUncheck {
-	color: #c80000;
+.application_manager_checklist_groupUncheck,
+.application_manager_checklist_fieldUncheck { 
+color: #c80000;
 }
 
-.application_manager_checklist_groupCheck, 
-.application_manager_checklist_fieldCheck {
-	color: #15a200;
+.application_manager_checklist_groupCheck,
+.application_manager_checklist_fieldCheck { 
+color: #15a200;
 }
 
-.application_manager_smalltext {
-	font-size: 11px;
+.application_manager_smalltext { 
+font-size: 11px;
 }
 
-.application_manager_overview-desc {
-	text-align: justify;
-	line-height: 180%;
-	padding: 20px 40px;
-	background: #f5f5f5;
-	border: 1px solid;
-	border-color: #fff #ddd #ddd #fff;
+.application_manager_overview-desc { 
+text-align: justify; 
+line-height: 180%; 
+padding: 20px 40px; 
+background: #f5f5f5; 
+border: 1px solid; 
+border-color: #fff #ddd #ddd #fff;
 }
 
-.application_manager_overview_legend {
-	background: #0f0f0f url(../../../images/tcat.png) repeat-x;
-	color: #fff;
-	border-top: 1px solid #444;
-	border-bottom: 1px solid #000;
-	padding: 7px;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	gap: 10px;
+.application_manager_overview_legend { 
+background: #0f0f0f url(../../../images/tcat.png) repeat-x; 
+color: #fff; 
+border-top: 1px solid #444; 
+border-bottom: 1px solid #000; 
+padding: 7px; 
+display: flex; 
+flex-wrap: nowrap; 
+justify-content: space-between; 
+gap: 10px;
 }
 
-.application_manager_overview_applications {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	gap: 10px;
-	padding: 7px;
-	text-align: center;
-	background: #f5f5f5;
-	border: 1px solid;
-	border-color: #fff #ddd #ddd #fff;
+.application_manager_overview_applications { 
+display: flex; 
+flex-wrap: nowrap; 
+justify-content: space-between; 
+gap: 10px; 
+padding: 7px; 
+text-align: center; 
+background: #f5f5f5; 
+border: 1px solid; 
+border-color: #fff #ddd #ddd #fff;
 }
 .application_manager_overview_legend_div,
-.application_manager_overview_applications_div {
-	width: 100%;
+.application_manager_overview_applications_div { 
+width: 100%;
 }
 
-.application_manager_wob_headline {
-	background: #0066a2 url(../../../images/thead.png) top left repeat-x;
-	color: #ffffff;
-	border-bottom: 1px solid #263c30;
-	padding: 8px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-topright: 6px;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+.application_manager_wob_headline { 
+background: #0066a2 url(../../../images/thead.png) top left repeat-x; 
+color: #ffffff; 
+border-bottom: 1px solid #263c30; 
+padding: 8px; 
+-moz-border-radius-topleft: 6px; 
+-moz-border-radius-topright: 6px; 
+-webkit-border-top-left-radius: 6px; 
+-webkit-border-top-right-radius: 6px; 
+border-top-left-radius: 6px; 
+border-top-right-radius: 6px;
 }
 
-.application_manager_wob {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
-	gap: 20px;
-	text-align: left;
-	margin-bottom: 10px;
+.application_manager_wob { 
+display: flex; 
+flex-wrap: nowrap; 
+justify-content: center; 
+gap: 20px; 
+text-align: left; 
+margin-bottom: 10px;
 }
 
-.application_manager_wob-textarea {
-	background: #f5f5f5;
-	border: 1px solid;
-	border-color: #fff #ddd #ddd #fff;
-	text-align: center;
-	padding: 5px;
-	-moz-border-radius-bottomright: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	border-bottom-left-radius: 6px;
+.application_manager_wob-textarea { 
+background: #f5f5f5; 
+border: 1px solid; 
+border-color: #fff #ddd #ddd #fff; 
+text-align: center; 
+padding: 5px; 
+-moz-border-radius-bottomright: 6px; 
+-webkit-border-bottom-right-radius: 6px; 
+border-bottom-right-radius: 6px; 
+-moz-border-radius-bottomleft: 6px; 
+-webkit-border-bottom-left-radius: 6px; 
+border-bottom-left-radius: 6px;
 }
 
-.application_manager-accpop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	display: none;
-	align-items: center;
-	justify-content: center;
-	z-index: 9999;
+.application_manager-accpop { 
+position: fixed; 
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; 
+background: rgba(0, 0, 0, 0.6); 
+display: none; 
+align-items: center; 
+justify-content: center; 
+z-index: 9999;
 }
 
-.application_manager-accpop:target {
-	display: flex;
+.application_manager-accpop:target { 
+display: flex;
 }
 
-.application_manager-pop {
-	width: 400px;
-	text-align: left;
-	background: #fff;
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	z-index: 2;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
-	-ms-border-radius: 8px;
-	border-radius: 8px;
-	-webkit-box-shadow: 0 0 10px #000;
-	-moz-box-shadow: 0 0 10px #000;
-	-o-box-shadow: 0 0 10px #000;
-	-ms-box-shadow: 0 0 10px #000;
-	box-shadow: 0 0 10px #000;
-	animation: fadeInScale 0.3s ease-out;
+.application_manager-pop { 
+width: 400px; 
+text-align: left; 
+background: #fff; 
+display: inline-block; 
+vertical-align: middle; 
+position: relative; 
+z-index: 2; 
+-webkit-box-sizing: border-box; 
+-moz-box-sizing: border-box; 
+box-sizing: border-box; 
+-webkit-border-radius: 8px; 
+-moz-border-radius: 8px; 
+-o-border-radius: 8px; 
+-ms-border-radius: 8px; 
+border-radius: 8px; 
+-webkit-box-shadow: 0 0 10px #000; 
+-moz-box-shadow: 0 0 10px #000; 
+-o-box-shadow: 0 0 10px #000; 
+-ms-box-shadow: 0 0 10px #000; 
+box-shadow: 0 0 10px #000; 
+animation: fadeInScale 0.3s ease-out;
 }
 
-.application_manager-closepop {
-	position: absolute;
-	top: -12.5px;
-	right: -12.5px;
-	display: block;
-	width: 30px;
-	height: 30px;
-	text-indent: -9999px;
-	background: url(../../../images/close.png) no-repeat 0 0;
+.application_manager-closepop { 
+position: absolute; 
+top: -12.5px; 
+right: -12.5px; 
+display: block; 
+width: 30px; 
+height: 30px; 
+text-indent: -9999px; 
+background: url(../../../images/close.png) no-repeat 0 0;
 }
 
-@keyframes fadeInScale {
-	from {
-		opacity: 0;
-		transform: scale(0.9);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
+@keyframes fadeInScale { 
+from { 
+opacity: 0; 
+transform: scale(0.9); 
+} 
+to { 
+opacity: 1; 
+transform: scale(1); 
 }
+
+}
+
 ```
 
-# Benutzergruppen-Berechtigungen setzen
-Damit alle Admin-Accounts Zugriff auf die Verwaltung der Checkliste und Bewerber:innen haben im ACP, müssen unter dem Reiter Benutzer & Gruppen » Administrator-Berechtigungen » Benutzergruppen-Berechtigungen die Berechtigungen einmal angepasst werden. Die Berechtigungen für den Bewerbungs-Manager befinden sich im Tab 'RPG Erweiterungen'.
+# Setting User Group Permissions
 
-# Links
+To ensure all admin accounts have access to manage the checklist and applicants in the ACP, the permissions must be adjusted once under the Users & Groups » Administrator Permissions » User Group Permissions tab. The permissions for the Application Manager are located in the 'RPG Extensions' tab.
+
+
+` ... # Links
 <b>ACP</b><br>
 index.php?module=rpgstuff-application_manager<br>
 index.php?module=rpgstuff-application_manager_user<br>
 <br>
-<b>Übersicht aller Accounts im Bewerbungsprozess</b><br>
+<b>Overview of all accounts in the application process</b><br>
 misc.php?action=application_manager
 
 # Demo
-## Checkliste
+## Checklist
 <img src="https://stormborn.at/plugins/application_manager_checkliste_acp.png">
 <img src="https://stormborn.at/plugins/application_manager_checkliste_index.png">
 <img src="https://stormborn.at/plugins/application_manager_checkliste_contentfield.png">
 
-## Übersicht
+## Overview
 <img src="https://stormborn.at/plugins/application_manager_overview_acp.png">
 <img src="https://stormborn.at/plugins/application_manager_overview.png">
 
-## WoB-Tool
+## WoB tool
 <img src="https://stormborn.at/plugins/application_manager_wob.png">
