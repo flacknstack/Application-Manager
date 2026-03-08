@@ -5,7 +5,7 @@
  * https://storming-gates.de/member.php?action=profile&uid=1712
 */
 
-// Direktzugriff auf die Datei aus Sicherheitsgründen sperren
+// Block direct access to the file for security reasons
 if(!defined("IN_MYBB"))
 {
 	die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
@@ -38,12 +38,12 @@ $plugins->add_hook('datahandler_user_delete_end', 'application_manager_user_dele
 $plugins->add_hook("datahandler_user_insert_end", "application_manager_user_insert");
 $plugins->add_hook("datahandler_user_update", "application_manager_user_update");
  
-// Die Informationen, die im Pluginmanager angezeigt werden
+// The information displayed in the plugin manager
 function application_manager_info(){
 
 	return array(
-		"name"		=> "Bewerbungs-Manager",
-		"description"	=> "Erstellt eine Übersicht aller Bewerber:innen mit individueller Checkliste für den Bewerbungsprozess und ein automatische Annahme-Tool (WoB).",
+		"name"		=> "Application Manager",
+		"description"	=> "Creates an overview of all applicants with an individual checklist for the application process and an automatic acceptance tool (WoB).",
 		"website"	=> "https://github.com/little-evil-genius/Bewerbungs-Manager",
 		"author"	=> "little.evil.genius",
 		"authorsite"	=> "https://storming-gates.de/member.php?action=profile&uid=1712",
@@ -52,12 +52,12 @@ function application_manager_info(){
 	);
 }
  
-// Diese Funktion wird aufgerufen, wenn das Plugin installiert wird (optional).
+// This function is called when the plugin is installed. (optional).
 function application_manager_install(){
     
     global $db, $cache, $lang;
 
-    // SPRACHDATEI
+    // LANGUAGE FILE
     $lang->load("application_manager");
 
     // RPG Stuff Modul muss vorhanden sein
@@ -79,8 +79,8 @@ function application_manager_install(){
     $maxdisporder = $db->fetch_field($db->query("SELECT MAX(disporder) FROM ".TABLE_PREFIX."settinggroups"), "MAX(disporder)");
     $setting_group = array(
         'name'          => 'application_manager',
-        'title'         => 'Bewerbungs-Manager',
-        'description'   => 'Einstellungen für den Bewerbungs-Manager',
+        'title'         => 'Application Manager',
+        'description'   => 'Settings for the application manager',
         'disporder'     => $maxdisporder+1,
         'isdefault'     => 0
     );
@@ -94,7 +94,7 @@ function application_manager_install(){
 	// Template Gruppe für jedes Design erstellen
     $templategroup = array(
         "prefix" => "applicationmanager",
-        "title" => $db->escape_string("Bewerbungs-Manager"),
+        "title" => $db->escape_string("Application Manager"),
     );
     $db->insert_query("templategroups", $templategroup);
     // Templates 
@@ -5795,3 +5795,4 @@ function application_manager_is_updated() {
 
     return true;
 }
+
