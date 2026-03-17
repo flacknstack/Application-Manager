@@ -60,7 +60,7 @@ function application_manager_install(){
     // LANGUAGE FILE
     $lang->load("application_manager");
 
-    // RPG Stuff Modul muss vorhanden sein
+    // The RPG Stuff module must be present.
     if (!file_exists(MYBB_ADMIN_DIR."/modules/rpgstuff/module_meta.php")) {
 		flash_message($lang->application_manager_error_rpgstuff, 'error');
 		admin_redirect('index.php?module=config-plugins');
