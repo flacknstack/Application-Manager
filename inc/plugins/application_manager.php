@@ -4994,7 +4994,7 @@ function application_manager_settings($type = 'install') {
 		),
 		'application_manager_playername' => array(
 			'title' => 'Nickname',
-            'description' => 'What is the FID / identifier for the profile/bio field designated for the nickname?<br><b>Note:</b> For classic profile fields, you must enter a number. For Risuena's Bio Plugin, you must enter the name/identifier of the field.',
+            'description' => 'What is the FID / identifier for the profile/bio field designated for the nickname? For classic profile fields, you must enter a number. For Risuenas Bio Plugin, you must enter the name/identifier of the field.',
             'optionscode' => 'text',
             'value' => '', // Default
             'disporder' => 5
