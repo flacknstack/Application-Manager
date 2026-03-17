@@ -4475,7 +4475,7 @@ function application_manager_user_insert(&$userhandler){
     $db->insert_query('application_manager', $insertApplicant);
 }
 
-// ACCOUNT WIRD IM ACP AUF BEWERBUNGSGRUPPE GESETZT && WIRD IM ACP ANGENOMMEN
+// ACCOUNT WIRD IM ACP AUF Applicant Group GESETZT && WIRD IM ACP ANGENOMMEN
 function application_manager_user_update($datahandler) {
 
     global $db, $user, $mybb;
@@ -4965,197 +4965,197 @@ function application_manager_settings($type = 'install') {
 
     $setting_array = array(
 		'application_manager_applicationgroup' => array(
-			'title' => 'Bewerbungsgruppe',
-            'description' => 'Welche Gruppe entspricht der Bewerbungsgruppe?',
+			'title' => 'Applicant Group',
+            'description' => 'Which group corresponds to the applicant group??',
             'optionscode' => 'groupselectsingle',
             'value' => '2', // Default
             'disporder' => 1
 		),
         'application_manager_team' => array(
-            'title' => 'Teamgruppe',
+            'title' => 'Team Group',
             'description' => 'Welche Gruppen dürfen Bewerbungen annehmen und korrigieren?',
             'optionscode' => 'groupselect',
             'value' => '4', // Default
             'disporder' => 2
         ),
 		'application_manager_excludedaccounts' => array(
-			'title' => 'ausgeschlossene Accounts',
-            'description' => 'Gib hier die UIDs der Teamaccounts an, die Steckbriefvorlagen oder ähnliche Themen gepostet haben, um diese als unkorrigierbar zu markieren. 0, falls nicht benötigt.',
+			'title' => 'Excluded Accounts',
+            'description' => 'Enter the UIDs of the team accounts here—specifically those that have posted profile templates or similar topics—to mark them as uncorrectable. Enter 0 if not needed.',
             'optionscode' => 'text',
             'value' => '0', // Default
             'disporder' => 3
 		),
 		'application_manager_applicationforum' => array(
-			'title' => 'Forum für Bewerbungen',
-            'description' => 'Wähle das entsprechende Forum für die Bewerbungen aus.',
+			'title' => 'Application Forum',
+            'description' => 'Select the appropriate forum for applications.',
             'optionscode' => 'forumselectsingle',
             'value' => '-1', // Default
             'disporder' => 4
 		),
 		'application_manager_playername' => array(
-			'title' => 'Spitzname',
-            'description' => 'Wie lautet die FID / der Identifikator von dem Profilfeld/Steckbrieffeld für den Spitznamen?<br><b>Hinweis:</b> Bei klassischen Profilfeldern muss eine Zahl eintragen werden. Bei dem Steckbrief-Plugin von Risuena muss der Name/Identifikator des Felds eingetragen werden.',
+			'title' => 'Nickname',
+            'description' => 'What is the FID / identifier for the profile/bio field designated for the nickname?<br><b>Note:</b> For classic profile fields, you must enter a number. For Risuena's Bio Plugin, you must enter the name/identifier of the field.',
             'optionscode' => 'text',
             'value' => '', // Default
             'disporder' => 5
 		),
 		'application_manager_checklist' => array(
-			'title' => 'Checkliste für Bewerbungen',
-            'description' => 'Soll eine Checklist für Bewerber:innen angezeigt werden? Die Konfiguration befindet sich im RPG Stuff-Modul.',
+			'title' => 'Job Application Checklist',
+            'description' => 'Should a checklist be displayed for applicants? The configuration is located in the RPG Stuff module.',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 6
 		),
 		'application_manager_checklist_hidden' => array(
-			'title' => 'Checkliste verstecken',
-            'description' => 'Soll die Checkliste durch ein Hinweisbanner ersetzt werden, wenn eine Bewerbung gepostet wurde?',
+			'title' => 'Hide Checklist',
+            'description' => 'Should the checklist be replaced by an information banner once an application has been posted?',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 7
 		),
         'application_manager_control' => array(
-            'title' => 'Bewerbungsfristen',
-            'description' => 'Soll es eine Übersicht und die Möglichkeit zur Fristenverwaltung für Bewerber:innen geben?',
+            'title' => 'Application Deadlines',
+            'description' => 'Should there be an overview and the option to manage deadlines for applicants?',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 8
         ),
         'application_manager_control_period' => array(
-            'title' => 'Bewerbungszeitraum',
-            'description' => 'Wie viele Tage haben Bewerber:innen Zeit, eine Bewerbung einzureichen?',
+            'title' => 'Application Period',
+            'description' => 'How many days do applicants have to submit an application?',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 9
         ),
         'application_manager_control_period_extension_days' => array(
-            'title' => 'Verlängerungszeitraum der Bewerbung',
-            'description' => 'Um wie viele Tage jeweils wird der Bewerbungszeitrum verlängert? 0 deaktiviert diese Funktion.',
+            'title' => 'Application Extension Period',
+            'description' => 'By how many days will the application period be extended each time? 0 disables this function.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 10
         ),
         'application_manager_control_period_extension_max' => array(
-            'title' => 'Maximale Anzahl der Verlängerungen der Bewerbungsfrist',
-            'description' => 'Wie oft darf die Bewerbungsfrist verlängert werden? Bei 0 ist die Anzahl nicht beschränkt.',
+            'title' => 'Maximum number of extensions of the application deadline',
+            'description' => 'How many times may the application deadline be extended? If set to 0, the number is unlimited.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 11
         ),
         'application_manager_control_period_extension' => array(
-            'title' => 'Selbstständige Verlängerung',
-            'description' => 'Dürfen User:innen ihre Bewerbungsfrist selbstständig verlängern?',
+            'title' => 'Independent Extension',
+            'description' => 'Are users allowed to independently extend their application deadline?',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 12
         ),
         'application_manager_control_period_visible' => array(
-            'title' => 'Einsehbare Verlängerungen der Bewerbungsfrist',
-            'description' => 'Dürfen andere User:innen die Anzahl der Verlängerungen sehen? Eigene Accounts und Teamaccounts sind ausgenommen.',
+            'title' => 'Viewable Extensions of the Application Deadline',
+            'description' => 'Are other users allowed to see the number of extensions? Personal accounts and team accounts are excluded.',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 13
         ),
         'application_manager_control_period_alert' => array(
-            'title' => 'Benachrichtigung über ablaufende Bewerbungsfrist',
-            'description' => 'Wie viele Tage vor Ablauf der Bewerbungsfrist sollen User:innen einen Erinnerungsbanner sehen können? 0 bedeutet, dass keine Benachrichtigung angezeigt wird.',
+            'title' => 'Notification of Approaching Application Deadline',
+            'description' => 'How many days before the application deadline should users see a reminder banner? 0 means that no notification will be displayed.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 14
         ),
         'application_manager_control_correction' => array(
-            'title' => 'Korrekturfrist',
-            'description' => 'Gibt es eine Korrekturfrist, die eingehalten werden muss? Sie wird bei jeder neuen Teamkorrektur zurückgesetzt.',
+            'title' => 'Correction deadline',
+            'description' => 'Is there a deadline for corrections that must be met? It is reset with every new team correction.',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 15
         ),
         'application_manager_control_correction_days' => array(
-            'title' => 'Korrekturzeitraum',
-            'description' => 'Wie viele Tage haben Bewerber:innen Zeit die Korrektur zu übernehmen?',
+            'title' => 'Correction Period',
+            'description' => 'How many days do applicants have to implement the corrections?',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 16
         ),
         'application_manager_control_correction_extension_days' => array(
-            'title' => 'Verlängerungszeitraum der Korrekturfrist',
-            'description' => 'Um wie viele Tage jeweils wird die Korrekturfrist verlängert? 0 deaktiviert diese Funktion.',
+            'title' => 'Extension period for the correction deadline',
+            'description' => 'By how many days is the correction period extended each time? 0 disables this function.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 17
         ),
         'application_manager_control_correction_extension_max' => array(
-            'title' => 'Maximale Anzahl der Verlängerungen der Korrekturfrist',
-            'description' => 'Wie oft darf die Korrekturfrist verlängert werden? Bei 0 ist die Anzahl nicht beschränkt.',
+            'title' => 'Maximum number of extensions of the correction period',
+            'description' => 'How often may the correction period be extended? If set to 0, the number is unlimited.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 18
         ),
         'application_manager_control_correction_extension' => array(
-            'title' => 'Selbstständige Verlängerung',
-            'description' => 'Dürfen User:innen ihre Korrekturfrist selbstständig verlängern?',
+            'title' => 'Independent Extension',
+            'description' => 'Are users allowed to independently extend their correction deadline?',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 19
         ),
         'application_manager_control_correction_visible' => array(
-            'title' => 'Einsehbare Verlängerungen der Korrekturfrist',
-            'description' => 'Dürfen andere User:innen die Anzahl der Verlängerungen sehen? Eigene Accounts und Teamaccounts sind ausgenommen.',
+            'title' => 'Viewable Extensions of the Correction Deadline',
+            'description' => 'Are other users allowed to see the number of extensions? Personal accounts and team accounts are excluded.',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 20
         ),
         'application_manager_control_correction_alert' => array(
-            'title' => 'Benachrichtigung über ablaufende Korrekturfrist',
-            'description' => 'Wie viele Tage vor Ablauf der Bewerbungsfrist sollen User:innen einen Erinnerungsbanner sehen können? 0 bedeutet, dass keine Benachrichtigung angezeigt wird.',
+            'title' => 'Notification of Approaching Correction Deadline',
+            'description' => 'How many days before the application deadline should users see a reminder banner? 0 means that no notification will be displayed.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 21
         ),
         'application_manager_control_team_alert' => array(
-            'title' => 'Teamerinnerung für offene Bewerbungen',
-            'description' => 'Wie lange darf eine Bewerbung oder Korrektur ohne Teamfeedback unbeantwortet bleiben, bis das entsprechende Teammitglied eine Benachrichtigung erhält? 0 bedeutet, dass keine Benachrichtigung gesendet wird.',
+            'title' => 'Team Reminder for Open Applications',
+            'description' => 'How long may an application or correction remain unanswered without team feedback before the corresponding team member receives a notification? 0 means that no notification is sent.',
             'optionscode' => 'numeric',
             'value' => '0', // Default
             'disporder' => 22
         ),
         'application_manager_wob' => array(
-            'title' => 'automatisches WoB',
-            'description' => 'Können Bewerber:innen mit einem Klick angenommen werden?',
+            'title' => 'automatic WoB',
+            'description' => 'Can applicants be accepted with a single click?',
             'optionscode' => 'yesno',
             'value' => '0', // Default
             'disporder' => 23
         ),
         'application_manager_wob_primary' => array(
-            'title' => 'primäre Gruppen',
-            'description' => 'Welche Gruppen sollen zur Auswahl für die primäre Gruppe stehen?',
+            'title' => 'Primary groups',
+            'description' => 'Which groups should be available for selection as the primary group?',
             'optionscode' => 'groupselect',
             'value' => 'none', // Default
             'disporder' => 24
         ),
         'application_manager_wob_secondary' => array(
-            'title' => 'sekundäre Gruppen',
-            'description' => 'Welche Gruppen sollen zur Auswahl für die sekundären Gruppen stehen?',
+            'title' => 'Secondary groups',
+            'description' => 'Which groups should be available for selection as secondary groups?',
             'optionscode' => 'groupselect',
             'value' => 'none', // Default
             'disporder' => 25
         ),
         'application_manager_wob_answer' => array(
-            'title' => 'automatischer Annahme-Text',
-            'description' => 'Soll eine automatische Antwort bei Annahme des Accounts gesendet werden?',
-            'optionscode' => 'select\n0=Nein\n1=automatischer Text\n2=automatischer Text mit Extrafunktion',
+            'title' => 'Automatic Acceptance Text',
+            'description' => 'Should an automatic reply be sent upon acceptance of the account?',
+            'optionscode' => 'select\n0=No\n1=automatic Text\n2=automatic Text with extra function',
             'value' => '0', // Default
             'disporder' => 26
         ),
         'application_manager_wob_text' => array(
-            'title' => 'Annahme-Text',
-            'description' => 'Der Standardtext, der beim Klicken auf den WoB-Button gepostet wird, wenn der Account angenommen wird. HTML- und MyBB-Code sind möglich.',
+            'title' => 'Acceptance Text',
+            'description' => 'The default text that is posted when the WoB button is clicked, provided the account is accepted. HTML and MyBB code are supported.',
             'optionscode' => 'textarea',
             'value' => '', // Default
             'disporder' => 27
         ),
         'application_manager_wob_date' => array(
-            'title' => 'WoB Datum speichern',
-            'description' => 'Gibt es in der Datenbanktabelle "users" eine Spalte, in der das Datum des WoB-Tages gespeichert werden soll? Falls nicht, einfach leer lassen.',
+            'title' => 'Save WoB Date',
+            'description' => 'Is there a column in the "users" database table where the date of the WoB day should be stored? If not, simply leave it blank.',
             'optionscode' => 'text',
             'value' => '', // Default
             'disporder' => 28
